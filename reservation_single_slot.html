@@ -16,13 +16,13 @@
 <body>
   <h2>Réservation</h2>
   <div class="reservation" id="slot1">
-    <p id="status1">Disponible</p>
+    <p id="status1">Sac de randonnée disponible</p>
     <input type="text" id="name1" placeholder="Votre nom">
     <button onclick="reserver('slot1')">Je réserve</button>
     <div id="output"></div>
   </div>
 
-  <div class="admin">
+  <div class="admin ">
     <h3>Interface admin</h3>
     <input type="password" id="adminPass" placeholder="Mot de passe admin">
     <button onclick="resetReservation()">Réinitialiser</button>
@@ -40,7 +40,7 @@
       }
 
       // Envoi de l'email via EmailJS
-      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+      emailjs.send("service_h4uudzr", "template_ob420kk", {
         to_name: "Jérémy",
         from_name: name,
         slot: slotId
@@ -58,7 +58,7 @@
 
     function resetReservation() {
       const pass = document.getElementById("adminPass").value;
-      if (pass !== "motdepasseadmin") {
+      if (pass !== "noelchloe2025") {
         document.getElementById("adminOutput").innerText = "Mot de passe incorrect.";
         return;
       }
